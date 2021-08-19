@@ -1,0 +1,36 @@
+.label {
+}
+
+.checkbox {
+  display: none;
+}
+
+.fake {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: solid 1px black;
+  border-radius: 3px;
+  position: relative;
+  background-color: #ffffff;
+}
+
+.fake::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: url(checkmark.svg) no-repeat;
+  top: 20%;
+  left: 20%;
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+.checkbox:checked + .fake::before {
+  opacity: 1;
+}
+
+.text {
+}

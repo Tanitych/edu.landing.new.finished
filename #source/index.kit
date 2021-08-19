@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduCenter</title>
+    <link rel="shortcut icon" href="img/logos/logo.svg" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="lips/fontawesome/all.min.css" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <link href="static/css/main.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="static/css/separate-css/custom.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <!-- @import "header.html" -->
+    <div
+      class="modal fade"
+      id="exampleModalToggle"
+      aria-hidden="true"
+      aria-labelledby="exampleModalToggleLabel"
+      tabindex="-1"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content modal-radius">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalToggleLabel">
+              Заполните форму
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="floatingInput"
+                  placeholder="Как вас зовут ?"
+                  required
+                />
+                <label for="floatingInput">Как вас зовут ?</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phone"
+                  placeholder="Ваш номер телефона"
+                  required
+                />
+                <label for="floatingPassword">Ваш номер телефона</label>
+              </div>
+              <div class="form-check d-flex align-items-center mb-4">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                  required
+                />
+                <label class="form-check-label ms-2" for="flexCheckDefault">
+                  Я согласен на обработку данных
+                </label>
+              </div>
+              <button class="btn btn-primary modal-form-btn">
+                Отправить заявку
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main>
+      <section class="section_1">
+        <div class="container-xxl">
+          <div
+            class="
+              row
+              d-flex
+              flex-column
+              align-items-center
+              justify-content-center
+            "
+          >
+            <div class="col-lg-9 mb-2">
+              <h1 class="main_title text-center">
+                Онлайн платформа <br />
+                для создания и <br />
+                продажи онлайн курсов
+              </h1>
+            </div>
+            <div class="col-lg-6 mb-lg-5 mb-4">
+              <p class="fs-5 fw-light text-center">
+                Для тренеров, преподавателей, инфобизнесменов, <br />
+                вебинаров, тренингов, курсов, очных и <br />
+                онлайн-занятий
+              </p>
+            </div>
+            <div class="col-lg-4 d-flex justify-content-center">
+              <button
+                class="btn btn-primary main_btn"
+                data-bs-toggle="modal"
+                href="#exampleModalToggle"
+                role="button"
+              >
+                Получить платформу
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section_2">
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-8">
+              <h2 class="mb-lg-5 mb-4">Узнай о EduCenter за 8 минут</h2>
+            </div>
+            <div class="col-lg-12">
+              <div class="modal_video">
+                <div class="modal_video_background"></div>
+                <button
+                  class="video_modal_btn"
+                  data-bs-target="#exampleModalToggle2"
+                  data-bs-toggle="modal"
+                  data-bs-dismiss="modal"
+                ></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="modal fade"
+          id="exampleModalToggle2"
+          aria-hidden="true"
+          aria-labelledby="exampleModalToggleLabel2"
+          tabindex="-1"
+        >
+          <div class="modal_viedo_btn">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-body modal-video-body p-0">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/2I5QTmpt2GY?controls=0"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="quiz" class="quiz">
+        <div class="container">
+          <div
+            class="row"
+            vertical-gutter="10"
+            vertical-lg-gutter="20"
+            data-gutter="10"
+            data-lg-gutter="20"
+          >
+            <div class="col-lg-7">
+              <div id="quiz-header" class="quiz__header">
+                <h3 class="quiz__header-title">
+                  Давайте адаптируем платформу
+                  <br />
+                  <span>под ваши потребности</span>
+                </h3>
+                <div class="quiz__text">
+                  Расскажите немного о себе. Выберите варианты ниже:
+                </div>
+              </div>
+              <div
+                id="quiz-header-finish"
+                class="quiz__header"
+                style="display: none"
+              >
+                <h3 class="quiz__header-title">
+                  Давайте адаптируем платформу
+                  <br />
+                  <span>под ваши потребности</span>
+                </h3>
+                <div class="quiz__text">Спасибо , осталось немного:</div>
+              </div>
+              <div class="quiz__wizard">
+                <div class="swiper-container js-quiz-thumbnail">
+                  <div class="quiz__steps">
+                    <div class="quiz__steps-item is-active">
+                      <div class="quiz__steps-number">1</div>
+                    </div>
+                    <div class="quiz__steps-item">
+                      <div class="quiz__steps-number">2</div>
+                    </div>
+                    <div class="quiz__steps-item">
+                      <div class="quiz__steps-number">3</div>
+                    </div>
+                    <div class="quiz__steps-item">
+                      <div class="quiz__steps-number">
+                        <img
+                          class="check_blue"
+                          src="img/icons/check_blue2.svg"
+                          alt=""
+                        />
+                        <img
+                          class="check_white"
+                          src="img/icons/check_2_white.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-container js-quiz-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="quiz__title">
+                        Выберите для каких целей вы хотите использовать
+                        <br />
+                        платформу:
+                      </div>
+                      <form class="quiz__form">
+                        <div class="row" vertical-gutter="10" data-gutter="20">
+                          <div class="col-md-6">
+                            <div class="quiz__radio">
+                              <input
+                                name="group1"
+                                id="radio1"
+                                type="radio"
+                                class="quiz__radio-input"
+                              />
+                              <label for="radio1">
+                                <span class="quiz__radio-title"
+                                  >Для блогеров</span
+                                >
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="quiz__radio">
+                              <input
+                                name="group1"
+                                id="radio2"
+                                type="radio"
+                                class="quiz__radio-input"
+                              />
+                              <label for="radio2">
+                                <span class="quiz__radio-title">
+                                  Для инфобизнесменов</span
+                                >
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="quiz__radio">
+                              <input
+                                name="group1"
+                                id="radio3"
+                                type="radio"
+                                class="quiz__radio-input"
+                              />
+                              <label for="radio3">
+                                <span class="quiz__radio-title"
+                                  >Для репетиторов</span
+                                >
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="quiz__radio">
+                              <input
+                                name="group1"
+                                id="radio4"
+                                type="radio"
+                                class="quiz__radio-input"
+                              />
+                              <label for="radio4">
+                                <span class="quiz__radio-title"
+                                  >Открыть онлайн школу
+                                </span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="quiz__title">
+                        Вы хотите приобрести платформу:
+                      </div>
+                      <form class="quiz__form">
+                        <div class="row" vertical-gutter="10" data-gutter="20">
+                          <div class="col-md-6">
+                            <div class="quiz__radio">
+                              <input
+                                name="group2"
+                                id="radio5"
+                                type="radio"
+                                class="quiz__radio-input"
+                              />
+                              <label for="radio5">
+                                <span class="quiz__radio-title"
+                                  >Взять в аренду ежемесячно
+                                </span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="quiz__radio">
+                              <input
+                                name="group2"
+                                id="radio6"
+                                type="radio"
+                                class="quiz__radio-input"
+                              />
+                              <label for="radio6">
+                                <span class="quiz__radio-title"
+                                  >Купить навсегда</span
+                                >
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="quiz__title">Вам нужна поддержка:</div>
+                      <form class="quiz__form">
+                        <div class="row" vertical-gutter="10" data-gutter="20">
+                          <div class="col-md-6">
+                            <div class="quiz__radio">
+                              <input
+                                name="group2"
+                                id="radio7"
+                                type="radio"
+                                class="quiz__radio-input"
+                              />
+                              <label for="radio7">
+                                <span class="quiz__radio-title"
+                                  >Я в первый на онлайн платформе</span
+                                >
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="quiz__radio">
+                              <input
+                                name="group2"
+                                id="radio8"
+                                type="radio"
+                                class="quiz__radio-input"
+                              />
+                              <label for="radio8">
+                                <span class="quiz__radio-title"
+                                  >Я уже работал (а) на онлайн платформе
+                                </span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="swiper-slide">
+                      <form class="quiz__form">
+                        <div class="row mb-3">
+                          <div class="col-md-6 pe-1 ps-4">
+                            <div class="">
+                              <input
+                                type="text"
+                                class="control__input quiz__input"
+                                placeholder="Имя"
+                                required
+                              />
+                            </div>
+                          </div>
+                          <div class="col-md-6 ps-1 pe-4">
+                            <div class="">
+                              <input
+                                type="tel"
+                                class="control__input quiz__input"
+                                placeholder="Номер телефона"
+                                required
+                                id="phone2"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="text-right">
+                          <button
+                            type="submit"
+                            class="last_next_btn btn btn-primary"
+                          >
+                            Далее
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="quiz__buttons">
+                  <button
+                    type="button"
+                    class="quiz__button js-quiz-slider-next btn btn-primary"
+                  >
+                    Далее
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5 mt-4 mt-lg-0">
+              <div class="quiz_border">
+                <div class="quiz__cta-title">
+                  Консультация и сопровождение до запуска онлайн школы
+                </div>
+                <p class="quiz__text">
+                  Звоните или пишите мы с удовольствием ответим на все вопросы!
+                </p>
+                <div class="quiz__cta-form">
+                  <div class="d-flex align-items-center mb-4">
+                <div class="manager_img_block">
+                      <img
+                        class="manager_img"
+                        src="img/Danik_main.svg"
+                        alt=""
+                      />
+                    </div>
+                    <div>
+                  <h4 class="title_man m-0">Карибжан Данияр</h4>
+                    <p class="speciality_text">Менеджер</p>
+                    </div>
+                  </div>
+                    <div class="contacts_manager">
+                      <a href="" class="contacts_manager_item">
+                        <img src="img/icons/tlg.svg" alt="">
+                        <span class="contacts_manager_text">+7 778 992 0000</span>
+                      </a>
+                      <a href="" class="contacts_manager_item">
+                        <img src="img/icons/wpp.svg" alt="">
+                        <span class="contacts_manager_text">+7 778 992 0000</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <section class="about2">
+        <div class="content">
+          <div class="about2__title">
+            <h2 class="mb-lg-5 mb-4">Для кого предназначена платформа</h2>
+          </div>
+          <div class="about2__content">
+            <div class="about2__content_items">
+              <img src="img/Ellipse 111.jpg" alt="" id="about2__content_img">
+              <p id="about2__content_title">Инфобизнесменов</p>
+              <p id="about2__content_subtitle">Для начинающих и опытных инфобизнесменов, которые проводят онлайн курсы</p>
+            </div>
+            <div class="about2__content_items">
+              <img src="img/Ellipse 111-2.jpg" alt="" id="about2__content_img">
+              <p id="about2__content_title">Учителей</p>
+              <p id="about2__content_subtitle">Для начинающих учителей, которые только переходят на онлайн формат</p>
+            </div>
+            <div class="about2__content_items">
+              <img src="img/Ellipse 111-3.jpg" alt="" id="about2__content_img">
+              <p id="about2__content_title">Блогеров</p>
+              <p id="about2__content_subtitle">У которых есть свои онлайн курсы</p>
+            </div>
+            <div class="about2__content_items">
+              <img src="img/Ellipse 111-4.jpg" alt="" id="about2__content_img">
+              <p id="about2__content_title">Бизнес-тренеров</p>
+              <p id="about2__content_subtitle">Коучерам, которым нужна автоматизированная платформа</p>
+            </div>
+            <div class="about2__content_items">
+              <img src="img/Ellipse 111-5.jpg" alt="" id="about2__content_img">
+              <p id="about2__content_title">Репетиторов</p>
+              <p id="about2__content_subtitle">Для репетиторов, которые хотят работать дистанционно</p>
+            </div>
+            <div class="about2__content_items">
+              <img src="img/Ellipse 111-6.jpg" alt="" id="about2__content_img">
+              <p id="about2__content_title">Онлайн-обучение</p>
+              <p id="about2__content_subtitle">Абсолютно для любой нише, которую хотите перенести на онлайн формат</p>
+            </div>
+          </div>
+          <div class="slider slider_about">
+            <div class="slider__item filter"><div class="about2__content_items">
+              <img src="img/Ellipse 111.jpg" alt="" id="about2__content_img">
+              <p id="about2__content_title">Инфобизнесменов</p>
+              <p id="about2__content_subtitle">Для начинающих и опытных инфобизнесменов, которые проводят онлайн курсы</p>
+            </div></div>
+            <div class="slider__item"><div class="about2__content_items">
+              <img src="img/Ellipse 111-2.jpg" alt="" id="about2__content_img">
+              <p id="about2__content_title">Учителей</p>
+              <p id="about2__content_subtitle">Для начинающих учителей, которые только переходят на онлайн формат</p>
+            </div></div>
+            <div class="slider__item filter">    <div class="about2__content_items">
+              <img src="img/Ellipse 111-3.jpg" alt="" id="about2__content_img">
+              <p id="about2__content_title">Блогеров</p>
+              <p id="about2__content_subtitle">У которых есть свои онлайн курсы</p>
+            </div></div>
+            <div class="slider__item">  <div class="about2__content_items">
+              <img src="img/Ellipse 111-4.jpg" alt="" id="about2__content_img">
+              <p id="about2__content_title">Бизнес-тренеров</p>
+              <p id="about2__content_subtitle">Коучерам, которым нужна автоматизированная платформа</p>
+            </div></div>
+            <div class="slider__item"> 
+              <div class="about2__content_items">
+                <img src="img/Ellipse 111-5.jpg" alt="" id="about2__content_img">
+                <p id="about2__content_title">Репетиторов</p>
+                <p id="about2__content_subtitle">Для репетиторов, которые хотят работать дистанционно</p>
+              </div>
+            </div>
+            <div class="slider__item"> 
+              <div class="about2__content_items">
+                <img src="img/Ellipse 111-6.jpg" alt="" id="about2__content_img">
+                <p id="about2__content_title">Онлайн-обучение</p>
+                <p id="about2__content_subtitle">Абсолютно для любой нише, которую хотите перенести на онлайн формат</p>
+              </div>
+            </div>
+          </div>
+          <button id="about2__button">Попробовать 5 дней бесплатно</button>
+        </div>
+      </section>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <section class="our_works" id="our_works">
+              <div class="content">
+                <div class="our_works__title">
+                  <h2 class="mb-lg-5 mb-4">Наши работы</h2>
+                </div>
+                <div class="our_works__content">
+                  <div class="our_works__content_items">
+                      <div class="our_works__content_hover">
+                        <img src="img/our_works-0.jpg" alt="" id="our_works__content_hover">
+                        <a href="#" id="our_works__content_view"> <span class="our_works__content_view"> Смотреть <br> проект</span></a>
+                      </div>
+                      <img id="our_works__content_img" src="img/our_works-1.jpg" alt="">
+                      <div class="our_works__content_titles">
+                        <h4 id="our_works__content_title">Образовательная платформа Daryn online</h4>
+                        <h5 id="our_works__content_subtitle">Образовательная экосистема №1 в Казахстане</h5>
+                      </div>
+                  </div>
+                  <div class="our_works__content_items">
+                      <div class="our_works__content_hover">
+                        <img src="img/our_works-0.jpg" alt="" id="our_works__content_hover">
+                        <a href="#" id="our_works__content_view"> <span class="our_works__content_view"> Смотреть <br> проект</span></a>
+                      </div>
+                      <img id="our_works__content_img" src="img/our_works-2.jpg" alt="">
+                      <div class="our_works__content_titles">
+                        <h4 id="our_works__content_title">Мобильное приложение Til Bil</h4>
+                        <h5 id="our_works__content_subtitle">Онлайн обучение</h5>
+                      </div>
+                  </div>
+                  <div class="our_works__content_items">
+                      <div class="our_works__content_hover">
+                        <img src="img/our_works-0.jpg" alt="" id="our_works__content_hover">
+                        <a href="#" id="our_works__content_view">Смотреть <br> проект</a>
+                      </div>
+                      <img id="our_works__content_img" src="img/our_works-3.jpg" alt="">
+                      <div class="our_works__content_titles">
+                        <h4 id="our_works__content_title">Музыкальная школа Qarshyga</h4>
+                        <h5 id="our_works__content_subtitle">Онлайн обучение музыкальным инструментам</h5>
+                      </div>
+                  </div>
+                  <div class="our_works__content_items">
+                      <div class="our_works__content_hover">
+                        <img src="img/our_works-0.jpg" alt="" id="our_works__content_hover">
+                        <a href="#" id="our_works__content_view">Смотреть <br> проект</a>
+                      </div>
+                      <img id="our_works__content_img" src="img/our_works-4.jpg" alt="">
+                      <div class="our_works__content_titles">
+                        <h4 id="our_works__content_title">Приложение Tender First</h4>
+                        <h5 id="our_works__content_subtitle">Онлайн платформа, курсы по тендерам</h5>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <section class="rates" id="rates">
+              <div class="content">
+                <div class="rates__title">
+                  <h2  class="mb-lg-5 mb-4">Тарифы</h2>
+                </div>
+                <div class="rates__content">
+                  <div class="rates__content_items">
+                    <div class="rates__content_header">
+                      <h2 id="rates__content_title">01</h2>
+                      <h3 id="rates__content_subtitle">Ежемесячный</h3>
+                      <ul class="rates__content_list">
+                        <li><span>Ежемесячные платежи</span></li>
+                        <li><span>Поддержка платформы</span></li>
+                        <li><span>Личный менеджер</span></li>
+                        <li><span>Бесплатная консультация</span></li>
+                        <li><span>Аккаунт VIMEO c хранилищем 250 ГБ</span></li>
+                        <li><span>Онлайн прием платежей</span></li>
+                        <li><span>Свой домен</span></li>
+                        <li><span>Свой логотип</span></li>
+                        <li><span>Тестирование</span></li>
+                        <li><span>Бесплатный 5-дневный период</span></li>
+                        <li id="gray_item"><span>Неограниченное количество пользователей</span></li>
+                        <li id="gray_item"><span>Мобильное приложение в подарок</span></li>
+                        <li id="gray_item"><span>Собственный портал с бесплатным обновлением</span></li>
+                        <li id="gray_item"><span>Неограниченное количество курсов</span></li>
+                      </ul>
+                    </div>
+                    <div class="rates__content_footer">
+                      <h2 id="rates__content_price">
+                        20 000
+                        <span id="tenge">₸</span>
+                        <span id="price_month">/мес.</span>
+                      </h2>
+                      <button class="apply_btn btn btn-primary">Оставить заявку</button>
+                    </div>
+                  </div>
+                  <div class="rates__content_items">
+                    <div class="rates__content_header">
+                      <h2 id="rates__content_title">02</h2>
+                      <h3 id="rates__content_subtitle">Турбо</h3>
+                      <ul class="rates__content_list">
+                        <li><span>Только разовый платеж</span></li>
+                        <li><span>Неограниченное количество пользователей</span></li>
+                        <li><span>Неограниченное количество курсов</span></li>
+                        <li><span>Личный менеджер</span></li>
+                        <li><span>Бесплатная консультация</span></li>
+                        <li><span>Онлайн прием платежей</span></li>
+                        <li><span>Свой домен</span></li>
+                        <li><span>Красивый дизайн кабинета</span></li>
+                        <li><span>Тестирование</span></li>
+                        <li><span>Выдача сертификатов</span></li>
+                        <li><span>Собственный портал с бесплатным обновлением</span></li>
+                        <li><span>Мобильное приложение в подарок</span></li>
+                        <li id="gray_item"><span>Индивидуальная разработка под ваши требования</span></li>
+                      </ul>
+                    </div>
+                    <div class="rates__content_footer">
+                      <h2 id="rates__content_price">
+                        500 000
+                        <span id="tenge">₸</span>
+                        <span id="price_month">/мес.</span>
+                      </h2>
+                      <button class="apply_btn btn btn-primary">Оставить заявку</button>
+                    </div>
+                    <img src="img/icons/gift-mini.svg" alt="" id="rates__gift1">
+                  </div>
+                  <div class="rates__content_items">
+                    <div class="rates__content_header">
+                      <h2 id="rates__content_title">03</h2>
+                      <h3 id="rates__content_subtitle">Премиум</h3>
+                      <ul class="rates__content_list">
+                        <li><span>Индивидуальная разработка под ваши требования </span></li>
+                        <li><span>Поддержка платформы</span></li>
+                        <li><span>Мобильное приложение в подарок</span></li>
+                      </ul>
+                    </div>
+                    <div class="rates__content_footer">
+                      <h2 id="rates__content_price">
+                        <span id="tenge"></span>
+                        <span id="price_month"></span>
+                      </h2>
+                      <button class="apply_btn btn btn-primary">Оставить заявку</button>
+                    </div>
+                    <img src="img/icons/gift-mini.svg" alt="" id="rates__gift2">
+                  </div>
+                </div>
+                <img src="img/icons/cloud-icon.png" alt="" id="rates__cloud">
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+ <section class="opportunities">
+              <div class="content">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+           
+                <div class="opportunities__title">
+                  <h3 id="opportunities__title">Возможности едуцентра</h3>
+                </div>
+                <div class="opportunities__content">
+                  <div class="opportunities__content_items">
+                    <img src="img/icons/hierarchy 1.svg" alt="" id="opportunities__icon">
+                    <p id="opportunities__text">Неограниченное количество учеников</p>
+                  </div>
+                  <div class="opportunities__content_items">
+                    <img src="img/icons/smartphone 1.svg" alt="" id="opportunities__icon">
+                    <p id="opportunities__text">Оптимизация под мобильные телефоны</p>
+                  </div>
+                  <div class="opportunities__content_items">
+                    <img src="img/icons/user 1.svg" alt="" id="opportunities__icon">
+                    <p id="opportunities__text">Защита от одновременного использования аккаунта</p>
+                  </div>
+                  <div class="opportunities__content_items">
+                    <img src="img/icons/008-exam.svg" alt="" id="opportunities__icon">
+                    <p id="opportunities__text">Тест и задание после каждого урока</p>
+                  </div>
+                  <div class="opportunities__content_items">
+                    <img src="img/icons/009-download.svg" alt="" id="opportunities__icon">
+                    <p id="opportunities__text">Надежная защита  видео от скачивание</p>
+                  </div>
+                  <div class="opportunities__content_items">
+                    <img src="img/icons/012-data-analysis.svg" alt="" id="opportunities__icon">
+                    <p id="opportunities__text">Профессиональная аналитика продаж</p>
+                  </div>
+                  <div class="opportunities__content_items">
+                    <img src="img/icons/cashless-payment 1.svg" alt="" id="opportunities__icon">
+                    <p id="opportunities__text">Оплата с карты и через онлайн платежи</p>
+                  </div>
+                  <div class="opportunities__content_items">
+                    <img src="img/icons/011-online-class.svg" alt="" id="opportunities__icon">
+                    <p id="opportunities__text">Возможность проведения вебинаров</p>
+                  </div>
+                </div>
+                <button class="btn btn-primary">Перейти на демоверсию</button>
+            
+          </div>
+        </div>
+      </div>
+          </div>
+            </section>
+            <section class="reviews" id="reviews"> 
+              <div class="reviews__title">
+                <h3 id="reviews__title">О нас говорят</h3>
+              </div>
+              <div class="reviews__slider">
+                <div class="swiper-container reviewsSwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="reviews__images">
+                        <a  class="reviews__cover js-video-modal" href="#"><img src="img/icons/play-mini-icon.svg" alt="" id="reviews__images_play"></a>
+                        <img src="img/Rectangle 428.jpg" alt="" id="reviews__images_effect">
+                        <img src="img/Rectangle 427.jpg" alt="" id="reviews__images_avatar">
+                      </div>
+                      <h4 id="reviews__text">Айбек Куатбай</h4>
+                      <h5 id="reviews__subtext">Основатель платформы Daryn Online</h5>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="reviews__images">
+                        <a  class="reviews__cover js-video-modal" href="#"><img src="img/icons/play-mini-icon.svg" alt="" id="reviews__images_play"></a>
+                        <img src="img/Rectangle 428.jpg" alt="" id="reviews__images_effect">
+                        <img src="img/Rectangle 427.jpg" alt="" id="reviews__images_avatar">
+                      </div>
+                      <h4 id="reviews__text">Айбек Куатбай</h4>
+                      <h5 id="reviews__subtext">Основатель платформы Daryn Online</h5>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="reviews__images">
+                        <a  class="reviews__cover js-video-modal" href="#"><img src="img/icons/play-mini-icon.svg" alt="" id="reviews__images_play"></a>
+                        <img src="img/Rectangle 428.jpg" alt="" id="reviews__images_effect">
+                        <img src="img/Rectangle 427.jpg" alt="" id="reviews__images_avatar">
+                      </div>
+                      <h4 id="reviews__text">Айбек Куатбай</h4>
+                      <h5 id="reviews__subtext">Основатель платформы Daryn Online</h5>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="reviews__images">
+                        <a  class="reviews__cover js-video-modal" href="#"><img src="img/icons/play-mini-icon.svg" alt="" id="reviews__images_play"></a>
+                        <img src="img/Rectangle 428.jpg" alt="" id="reviews__images_effect">
+                        <img src="img/Rectangle 427.jpg" alt="" id="reviews__images_avatar">
+                      </div>
+                      <h4 id="reviews__text">Айбек Куатбай</h4>
+                      <h5 id="reviews__subtext">Основатель платформы Daryn Online</h5>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="reviews__images">
+                        <a  class="reviews__cover js-video-modal" href="#"><img src="img/icons/play-mini-icon.svg" alt="" id="reviews__images_play"></a>
+                        <img src="img/Rectangle 428.jpg" alt="" id="reviews__images_effect">
+                        <img src="img/Rectangle 427.jpg" alt="" id="reviews__images_avatar">
+                      </div>
+                      <h4 id="reviews__text">Айбек Куатбай</h4>
+                      <h5 id="reviews__subtext">Основатель платформы Daryn Online</h5>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="reviews__images">
+                        <a  class="reviews__cover js-video-modal" href="#"><img src="img/icons/play-mini-icon.svg" alt="" id="reviews__images_play"></a>
+                        <img src="img/Rectangle 428.jpg" alt="" id="reviews__images_effect">
+                        <img src="img/Rectangle 427.jpg" alt="" id="reviews__images_avatar">
+                      </div>
+                      <h4 id="reviews__text">Айбек Куатбай</h4>
+                      <h5 id="reviews__subtext">Основатель платформы Daryn Online</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="contacts" id="contacts">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12">
+                    <div class="content3">
+                      <div class="contacts__title">
+                        <h3 id="contacts__title">Контакты</h3>
+                      </div>
+                      <div class="contacts__content">
+                        <div class="contacts__content_items">
+                          <h5 id="contacts__content_title">Адрес : </h5>
+                          <h4 id="contacts__content_subtitle">Богенбай батыра 150</h4>
+                        </div>
+                        <div class="contacts__content_items">
+                          <h5 id="contacts__content_title">Номер телефона : </h5>
+                          <a href="tel:+77789920000"><h4 id="contacts__content_subtitle">+7 778 992 00 00</h4></a>
+                        </div>
+                        <div class="contacts__content_items">
+                          <h5 id="contacts__content_title">Электронная почта: </h5>
+                          <a href="mailto:sales@bgpro.kz"><h4 id="contacts__content_subtitle">Sales@bgpro.kz</h4></a>
+                        </div>
+                      </div>
+                      <a href="#" id="contacts__maplink">
+                        <p>Посмотреть на карте </p>
+                        <img src="img/icons/play-blue.svg" alt="">
+                      </a>
+                    </div>
+                   
+                </div>
+              </div>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d726.4905370962792!2d76.93378502917604!3d43.25221509869606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836f8cee02ed9b%3A0xc7a41cb52843d88c!2sBugin%20Soft!5e0!3m2!1sru!2skz!4v1629282700718!5m2!1sru!2skz" width="100%" height="570px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </section>
+
+  <footer><div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+    
+        <div class="content">
+          <div class="footer__up">
+            <a href="#" class="footer__logo">
+              <img src="img/icons/logo-educenter.svg" alt="" id="header__logo-icon">
+              <p id="header__logo-text">создай свою онлайн школу <br/> вместе с educenter</p>
+            </a>
+            <nav class="header__menu2">
+              <ul>
+                <li><a href="#about">О продукте</a></li>
+                <li><a href="#our_works">Наши работы</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+                <li><a href="#rates">Тарифы</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+              </ul>
+            </nav>
+            <div class="footer__social">
+              <a href="#"><img id="footer__social_items" src="img/icons/tg-icon.svg" alt=""></a>
+              <a href="#"><img id="footer__social_items" src="img/icons/wa-icon.svg" alt=""></a>
+              <a href="#"><img id="footer__social_items" src="img/icons/fb-icon.svg" alt=""></a>
+              <a href="#"><img id="footer__social_items" src="img/icons/ig-icon.svg" alt=""></a>
+              <a href="#"><img id="footer__social_items" src="img/icons/vk-icon.svg" alt=""></a>
+            </div>
+          </div>
+          <div class="footer__down">
+            <div class="footer__allrights">
+              <p id="footer__allrights">© 2021 Все правы защищены</p>
+            </div>
+            <div class="footer__storeapp">
+              <a href="#">
+                <div class="footer__playstore">
+                  <img id="footer__playstore_img" src="img/icons/android-icon.svg" alt="">
+                  <p id="footer__playstore_text">Play Market</p>
+                </div>
+              </a>
+              <a href="#">
+                <div class="footer__appstore">
+                  <img id="footer__appstore_img" src="img/icons/apple-icon.svg" alt="">
+                  <p id="footer__appstore_text">App Store</p>
+                </div>
+              </a>
+            </div>
+            <div class="footer__developer">
+              <p id="footer__developer_text">Разработка сайта</p>
+              <img id="footer__developer_img" src="img/icons/logo-buginsoft.svg" alt="" id="footer__developer_img">
+            </div>
+          </div>
+        </div>
+     
+    </div>
+  </div>
+</div>
+ </footer>
+    </main>
+          <!--/. Modal Cta End -->
+
+            <!-- Video Modal Begin -->
+            <div class="video-modal">
+              <div class="video-modal__content">
+                  <iframe class="video-modal__iframe" width="100%" height="100%" frameborder="0" allowfullscreen src=></iframe>
+                  <a href="#" class="video-modal__close">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="24" height="24">
+                          <path fill="currentColor" d="M30.3448276,31.4576271 C29.9059965,31.4572473 29.4852797,31.2855701 29.1751724,30.980339 L0.485517241,2.77694915 C-0.122171278,2.13584324 -0.104240278,1.13679247 0.52607603,0.517159487 C1.15639234,-0.102473494 2.17266813,-0.120100579 2.82482759,0.477288136 L31.5144828,28.680678 C31.9872448,29.1460053 32.1285698,29.8453523 31.8726333,30.4529866 C31.6166968,31.0606209 31.0138299,31.4570487 30.3448276,31.4576271 Z"></path>
+                          <path fill="currentColor" d="M1.65517241,31.4576271 C0.986170142,31.4570487 0.383303157,31.0606209 0.127366673,30.4529866 C-0.12856981,29.8453523 0.0127551942,29.1460053 0.485517241,28.680678 L29.1751724,0.477288136 C29.8273319,-0.120100579 30.8436077,-0.102473494 31.473924,0.517159487 C32.1042403,1.13679247 32.1221713,2.13584324 31.5144828,2.77694915 L2.82482759,30.980339 C2.51472031,31.2855701 2.09400353,31.4572473 1.65517241,31.4576271 Z"></path>
+                      </svg>
+                  </a>
+              </div>
+              <div class="video-modal__overlay"></div>
+          </div>
+          <!--/. Video Modal End -->
+    <!-- @import "footer.html" -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jq/jquery.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+    <script src="static/js/main.js"></script>
+    <script src="static/js/separate-js/scripts.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
